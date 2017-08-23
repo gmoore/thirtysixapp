@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 
 gem 'haml'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'capybara', '~> 2.13'
