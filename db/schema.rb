@@ -14,6 +14,10 @@ ActiveRecord::Schema.define(version: 20170820141735) do
 
   create_table "app_requests", force: :cascade do |t|
     t.string "request_id"
+    t.string "api_key"
+    t.string "controller"
+    t.string "action"
+    t.string "query_parameters"
     t.integer "request_time_in_milliseconds"
     t.integer "memory_in_mb"
     t.integer "objects"
@@ -28,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170820141735) do
     t.integer "files"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["api_key"], name: "index_app_requests_on_api_key"
   end
 
 end

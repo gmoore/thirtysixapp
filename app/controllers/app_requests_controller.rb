@@ -1,5 +1,5 @@
 class AppRequestsController < ApplicationController
   def index
-    @app_requests = AppRequest.all
+    @slowest_requests = AppRequest.slowest
   end
 end

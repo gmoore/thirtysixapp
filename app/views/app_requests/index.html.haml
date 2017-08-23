@@ -1,1 +1,14 @@
-hi
+%h1 Slowest Requests
+
+%table.table
+  %tr
+    %th Controller
+    %th Action
+    %th Time (ms)
+    %th Strings
+  - @slowest_requests.each do |app_request|
+    %tr
+      %td=app_request.controller
+      %td=app_request.action
+      %td=app_request.request_time_in_milliseconds
+      %td=app_request.strings
