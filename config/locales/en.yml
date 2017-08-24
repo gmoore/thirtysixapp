@@ -30,4 +30,38 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order:
+      - :year
+      - :month
+      - :day
+
+  time:
+    formats:
+      default: "%B %d, %Y %I:%M %p"
+      short: "%m/%d/%Y %l:%M %p"
+      slashed_date: "%m/%d/%Y"
+      day_time: "%a, %b %d %l:%M %P"
+      day_time_at: "%a, %b %d at %I:%M %P"
+      date: "%B %d, %Y"
+      long_date: "%B %d, %Y %I:%M %p"
+      long_with_day: "%A, %b %d %Y %l:%M %p"
+      long_with_abbrviated_day: "%a, %b %d %Y %l:%M %p"
+      abbreviated_day: "%a"
+      time: "%I:%M %p"
+      day: "%A"
+      date_for_input: "%Y-%m-%d"
+      datetime_for_input: "%Y-%m-%d %I:%M %p"
+      date_at_time: "%B %d, %Y at %I:%M %p"
+    am: "am"
+    pm: "pm"

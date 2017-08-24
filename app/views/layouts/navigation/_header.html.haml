@@ -1,2 +1,11 @@
 %header.main-header
   %a.logo{:href=>"/"} Thirtysix
+  %nav.navbar.navbar-static-top
+    .navbar-custom-menu
+      %ul.nav.navbar-nav{:style => "color: white; margin-top: 15px; margin-right: 5px;"}
+        %li.user.user-menu
+          %span
+            -if session[:api_key].present?
+              =session[:api_key]
+            -else
+              No API Key

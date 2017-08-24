@@ -1,14 +1,24 @@
-%h1 Slowest Requests
-
-%table.table
-  %tr
-    %th Controller
-    %th Action
-    %th Time (ms)
-    %th Strings
-  - @slowest_requests.each do |app_request|
-    %tr
-      %td=app_request.controller
-      %td=app_request.action
-      %td=app_request.request_time_in_milliseconds
-      %td=app_request.strings
+.content
+  .row
+    .col-md-12
+      .box.box-info
+        .box-header
+          %h3 Slowest Requests
+        .box-body
+          -if @slowest_requests.empty?
+            %p This API Key has no requests associated with it
+          -else
+            %table.table
+              %tr
+                %th ID
+                %th Controller
+                %th Action
+                %th Time (ms)
+                %th Strings
+              - @slowest_requests.each do |app_request|
+                %tr
+                  %td=link_to app_request.id, app_request_path(app_request)
+                  %td=link_to app_request.controller, app_controllers_path(:app_controller => app_request.controller, :app_action => app_request.action)
+                  %td=app_request.action
+                  %td=app_request.request_time_in_milliseconds
+                  %td=app_request.strings

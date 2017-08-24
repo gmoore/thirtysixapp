@@ -1,0 +1,16 @@
+.content
+  .row
+    .col-md-12
+      .box.box-info
+        .box-header
+          %h3 API Keys
+
+        .box-body
+          %table.table
+            %tr
+              %th Key
+              %th Created At
+            - @api_keys.each do |api_key|
+              %tr
+                %td=api_key.key_text
+                %td=I18n.l(api_key.created_at)

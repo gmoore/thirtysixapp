@@ -21,6 +21,7 @@ class CreateRequestsTable < ActiveRecord::Migration[5.1]
       t.timestamps
 
       t.index       :api_key
+      t.index       [:api_key, :controller, :action]
     end
   end
 end
