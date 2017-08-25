@@ -1,6 +1,7 @@
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
+require 'pry'
 
 RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
@@ -15,5 +16,7 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  config.include Capybara::DSL
 
 end
