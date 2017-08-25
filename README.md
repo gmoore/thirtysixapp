@@ -9,6 +9,7 @@ You'll need Ruby 2.4. You'll also need the foreman gem.
 ```
 git clone git@github.com:gmoore/thirtysixapp.git
 cd thirtysixapp
+bundle
 rake db:migrate
 rake generate_api_key
 foreman start
