@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "app_requests#index"
+  
   resources :sessions, :only => [:create]
   resources :app_requests, :only => [:index, :show]
   resources :app_controllers, :only => [:index]
