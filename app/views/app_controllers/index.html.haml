@@ -10,12 +10,12 @@
               %th ID
               %th Controller
               %th Action
-              %th Time (ms)
-              %th Requested At
+              %th.text-right Time (ms)
+              %th.text-right Requested At
             - @app_requests.each do |app_request|
               %tr
                 %td=link_to app_request.id, app_request_path(app_request)
                 %td=app_request.controller
                 %td=app_request.action
-                %td=app_request.request_time_in_milliseconds
-                %td=l app_request.created_at
+                %td.text-right=app_request.request_time_in_milliseconds
+                %td.text-right=l app_request.created_at

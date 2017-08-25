@@ -13,12 +13,12 @@
                 %th ID
                 %th Controller
                 %th Action
-                %th Time (ms)
-                %th Strings
+                %th.text-right Time (ms)
+                %th.text-right Strings
               - @slowest_requests.each do |app_request|
                 %tr
                   %td=link_to app_request.id, app_request_path(app_request)
                   %td=link_to app_request.controller, app_controllers_path(:app_controller => app_request.controller, :app_action => app_request.action)
                   %td=app_request.action
-                  %td=app_request.request_time_in_milliseconds
-                  %td=app_request.strings
+                  %td.text-right=app_request.request_time_in_milliseconds
+                  %td.text-right=app_request.strings

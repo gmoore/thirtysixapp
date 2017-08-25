@@ -1,51 +1,56 @@
-%h1 App Request
-
-%table.table
-  %tr
-    %td.pull-right ID
-    %td=@app_request.id
-  %tr
-    %td.pull-right Controller
-    %td=@app_request.controller
-  %tr
-    %td.pull-right Action
-    %td=@app_request.action
-  %tr
-    %td.pull-right Requested At
-    %td=l @app_request.created_at
-  %tr
-    %td.pull-right Request Time (ms)
-    %td=@app_request.request_time_in_milliseconds
-  %tr
-    %td.pull-right Params
-    %td=@app_request.query_parameters
-  %tr
-    %td.pull-right Objects
-    %td=@app_request.objects
-  %tr
-    %td.pull-right Classes
-    %td=@app_request.classes
-  %tr
-    %td.pull-right Modules
-    %td=@app_request.modules
-  %tr
-    %td.pull-right Floats
-    %td=@app_request.floats
-  %tr
-    %td.pull-right Strings
-    %td=@app_request.strings
-  %tr
-    %td.pull-right RegExps
-    %td=@app_request.regexps
-  %tr
-    %td.pull-right Hashes
-    %td=@app_request.hashes
-  %tr
-    %td.pull-right Structs
-    %td=@app_request.structs
-  %tr
-    %td.pull-right Arrays
-    %td=@app_request.arrays
-  %tr
-    %td.pull-right Files
-    %td=@app_request.files
+.content
+  .row
+    .col-md-12
+      .box.box-info
+        .box-header
+          %h3 App Request
+        .box-body
+          %table.table
+            %tr
+              %td.pull-right ID
+              %td=@app_request.id
+            %tr
+              %td.pull-right Controller
+              %td=@app_request.controller
+            %tr
+              %td.pull-right Action
+              %td=@app_request.action
+            %tr
+              %td.pull-right Requested At
+              %td=l @app_request.created_at
+            %tr
+              %td.pull-right Request Time (ms)
+              %td=@app_request.request_time_in_milliseconds
+            %tr
+              %td.pull-right Params
+              %td=@app_request.query_parameters
+            %tr
+              %td.pull-right Objects
+              %td=@app_request.objects
+            %tr
+              %td.pull-right Classes
+              %td=@app_request.classes
+            %tr
+              %td.pull-right Modules
+              %td=@app_request.modules
+            %tr
+              %td.pull-right Floats
+              %td=@app_request.floats
+            %tr
+              %td.pull-right Strings
+              %td=@app_request.strings
+            %tr
+              %td.pull-right RegExps
+              %td=@app_request.regexps
+            %tr
+              %td.pull-right Hashes
+              %td=@app_request.hashes
+            %tr
+              %td.pull-right Structs
+              %td=@app_request.structs
+            %tr
+              %td.pull-right Arrays
+              %td=@app_request.arrays
+            %tr
+              %td.pull-right Files
+              %td=@app_request.files
