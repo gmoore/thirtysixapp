@@ -1,8 +1,6 @@
 # Thirtysix App
 
-There's a running version of the app here:
-
-`http://www.thirtysix.tech`
+There's a running version of the app here: [Thirtysix App](http://www.thirtysix.tech)
 
 ## Running On Your Own
 
